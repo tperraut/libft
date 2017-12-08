@@ -6,7 +6,7 @@
 /*   By: tperraut <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 17:04:17 by tperraut          #+#    #+#             */
-/*   Updated: 2016/05/23 20:48:48 by tperraut         ###   ########.fr       */
+/*   Updated: 2017/12/08 10:21:34 by tperraut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,12 @@ int		ft_satoi(const char *str)
 		ni[1]++;
 	while (str[ni[1]] == '0')
 		ni[1]++;
+	if (!ft_isdigit(str[ni[1]]))
+		ft_error(ER_MSG);
 	while (ft_isdigit(str[ni[1]]))
 	{
 		if (r > MAX_INT)
-			ft_error("atoi int limit");
+			ft_error(ER_MSG);
 		r = r * 10 + (unsigned int)(str[ni[1]++] - '0');
 	}
 	return (r * ni[0]);

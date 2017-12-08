@@ -6,7 +6,7 @@
 /*   By: tperraut <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:34:39 by tperraut          #+#    #+#             */
-/*   Updated: 2016/09/05 16:51:38 by tperraut         ###   ########.fr       */
+/*   Updated: 2017/12/08 10:20:51 by tperraut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # define ER -1
 # define GNL_DEBUG 1
 # define MAX_INT 2147483648
+# define ER_MSG "ERROR\n"
 
 # define ABS(X)		(X < 0 ? -X : X)
 # define MAX(X, Y)	(X < Y ? Y : X)

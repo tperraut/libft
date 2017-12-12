@@ -6,7 +6,7 @@
 /*   By: tperraut <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/18 15:19:13 by tperraut          #+#    #+#             */
-/*   Updated: 2017/12/08 14:36:18 by tperraut         ###   ########.fr       */
+/*   Updated: 2017/12/12 10:58:18 by tperraut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <sys/uio.h>
 #include <string.h>
 #include "libft.h"
-#include "get_next_line.h"
 
 static int	get_end(char **line, char **myline, char **temp)
 {
@@ -54,8 +53,8 @@ static int	ft_check_eof(char **line, char **myline)
 
 int			get_next_line(int const fd, char **line)
 {
-	char		buf[CHECK(BUFF_SIZE) + 1];
 	static char	*myline = NULL;
+	char		buf[BUFF_SIZE + 1];
 	int			rd;
 	int			len;
 	char		*temp;
@@ -64,7 +63,7 @@ int			get_next_line(int const fd, char **line)
 	len = 0;
 	while (ft_strchr(myline + (len - rd), '\n') == NULL)
 	{
-		if (!(rd = read(fd, buf, CHECK(BUFF_SIZE))))
+		if (!(rd = read(fd, buf, BUFF_SIZE)))
 			return (ft_check_eof(line, &myline));
 		if (rd == -1 || !line)
 			return (-1);

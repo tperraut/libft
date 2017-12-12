@@ -6,7 +6,7 @@
 /*   By: tperraut <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:34:39 by tperraut          #+#    #+#             */
-/*   Updated: 2017/12/08 10:20:51 by tperraut         ###   ########.fr       */
+/*   Updated: 2017/12/12 10:56:36 by tperraut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,13 @@
 # define FALSE 0
 # define ER -1
 # define GNL_DEBUG 1
+# define BUFF_SIZE 8192
 # define MAX_INT 2147483648
 # define ER_MSG "ERROR\n"
+# define STDIN 0
+# define STDOUT 1
+# define STDER 2
+
 
 # define ABS(X)		(X < 0 ? -X : X)
 # define MAX(X, Y)	(X < Y ? Y : X)
@@ -149,6 +154,14 @@ int				ft_abs(int n);
 int				ft_sqrt(int n);
 int				ft_min(int x, int y);
 int				ft_max(int x, int y);
+
+/*
+** ---------
+** | PARSE |
+** ---------
+*/
+
+int				get_next_line(int const fd, char **line);
 
 /*
 ** ---------

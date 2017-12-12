@@ -6,7 +6,7 @@
 #    By: tperraut <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/06 15:54:33 by tperraut          #+#    #+#              #
-#*   Updated: 2017/12/12 10:41:41 by tperraut         ###   ########.fr       *#
+#*   Updated: 2017/12/12 10:46:26 by tperraut         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,9 +29,7 @@ LIB = ar rc
 ##########
 
 INC_DIR = ./include/
-INC_NAME = \
-	libft.h \
-	get_next_line.h
+INC_NAME = libft.h
 INCLUDE = $(addprefix $(INC_DIR), $(INC_NAME))
 INC = -I $(INC_DIR)
 

@@ -6,7 +6,7 @@
 /*   By: tperraut <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:34:39 by tperraut          #+#    #+#             */
-/*   Updated: 2017/12/12 10:56:36 by tperraut         ###   ########.fr       */
+/*   Updated: 2017/12/12 11:29:51 by tperraut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 # define TRUE 1
 # define FALSE 0
+# define OK 1
 # define ER -1
 # define GNL_DEBUG 1
 # define BUFF_SIZE 8192

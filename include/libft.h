@@ -6,7 +6,7 @@
 /*   By: tperraut <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:34:39 by tperraut          #+#    #+#             */
-/*   Updated: 2017/12/12 11:29:51 by tperraut         ###   ########.fr       */
+/*   Updated: 2017/12/15 16:04:33 by tperraut         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # define GNL_DEBUG 1
 # define BUFF_SIZE 8192
 # define MAX_INT 2147483648
-# define ER_MSG "ERROR\n"
+# define ER_MSG "Error\n"
 # define STDIN 0
 # define STDOUT 1
 # define STDER 2
@@ -107,6 +107,7 @@ int				ft_tablen(char **t);
 
 int				ft_atoi(const char *str);
 int				ft_satoi(const char *str);
+int				ft_stratoi(char **str);
 
 char			*ft_itoa(int n);
 
